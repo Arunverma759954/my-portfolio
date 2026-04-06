@@ -1,0 +1,28 @@
+.introduction {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #000000;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+    z-index: 1;
+    path {
+      fill: #111827;
+    }
+  }
+  .content_wrapper {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+}
