@@ -250,6 +250,36 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "aerospace",
+    category: "Industrial",
+    title: "Aerospace Aluminium Alloys",
+    subtitle: "Premium Glass Partition Systems",
+    description: "A high-performance digital gateway for Aerospace Aluminium Alloys, India's premier manufacturer of high-precision demountable glass partition profiles. Designed for architectural excellence with advanced acoustic ratings and custom extrusion integration.",
+    highlights: [
+      { title: "Precision Engineering", text: "Profiles extruded to extreme tolerances, ensuring seamless installation across large-scale commercial glass projects." },
+      { title: "Acoustic Excellence", text: "Optimized for executive environments with system ratings up to 52dB for superior privacy and sound insulation." },
+      { title: "Scalable Infrastructure", text: "High-performance architecture supporting real-time catalog discovery for architects and contractors nationwide." },
+      { title: "PAN-India Logistics", text: "Strategically located manufacturing in Navi Mumbai (Airoli) for rapid dispatch to all major urban centers." },
+    ],
+    src: "/assets/alu.png",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://aluminium-project.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Redefining modern interiors with Aerospace. A premium industrial portal for world-class glass partition systems and sustainable architectural solutions.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
     id: "stevron",
     category: "Industrial",
     title: "STEVRON Power Tools",
