@@ -23,28 +23,50 @@ const SkillsSection = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12">
           {Object.values(SKILLS).map((skill: Skill, index: number) => (
             <motion.div
               key={skill.id}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.03 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.05,
+                ease: "easeOut"
+              }}
+              whileHover={{ y: -10 }}
               className="group flex flex-col items-center justify-center space-y-6"
             >
-              <div className="relative w-24 h-24 p-6 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 transform group-hover:scale-110 group-hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)] flex items-center justify-center">
+              <div 
+                className="relative w-24 h-24 p-6 bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all duration-500 flex items-center justify-center overflow-hidden"
+                style={{ 
+                  ["--hover-glow" as any]: `${skill.color}33` 
+                }}
+              >
+                {/* Hover Glow Effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"
+                  style={{ backgroundColor: skill.color }}
+                />
+                
                 <Image 
                   src={skill.icon} 
                   alt={skill.label} 
                   width={64} 
                   height={64} 
-                  className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="relative z-10 object-contain transition-all duration-500 group-hover:scale-110"
                 />
               </div>
-              <p className="text-xs font-black text-gray-400 group-hover:text-[#2563eb] uppercase tracking-[0.2em] transition-colors">
-                {skill.label}
-              </p>
+              <div className="text-center space-y-1">
+                <p className="text-[10px] font-black text-gray-400 group-hover:text-blue-600 uppercase tracking-[0.2em] transition-colors">
+                  {skill.label}
+                </p>
+                <div 
+                  className="h-1 w-0 group-hover:w-full mx-auto transition-all duration-500 rounded-full"
+                  style={{ backgroundColor: skill.color }}
+                />
+              </div>
             </motion.div>
           ))}
         </div>

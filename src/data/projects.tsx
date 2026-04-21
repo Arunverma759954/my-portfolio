@@ -250,6 +250,66 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "air-fast",
+    category: "Logistics",
+    title: "Deb Air Express",
+    subtitle: "Professional Cargo & Logistics Solutions",
+    description: "A comprehensive logistics and transportation portal for Deb Air Express, delivering fast, reliable, and customized supply chain solutions across India. Built with a focus on real-time tracking and mission-critical shipment management.",
+    highlights: [
+      { title: "Nationwide Reach", text: "Serving every pincode in India through proprietary multi-modal transport hubs and a premium air freight network." },
+      { title: "27 Years of Excellence", text: "Leveraging decades of technological precision to provide end-to-end logistics solutions for enterprise clients." },
+      { title: "Secure & Reliable", text: "Enterprise-grade security and advanced tracking for every shipment, ensuring sub-second visibility throughout the transit process." },
+      { title: "Multi-Modal Infrastructure", text: "Optimized large-scale cargo solutions leveraging air, road, and rail infrastructure for diverse industrial bulk shipments." },
+    ],
+    src: "/assets/air.webp",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://air-fast.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Empowering growth with 27 years of technological precision and nationwide reach. A premium gateway for mission-critical shipments and global logistics perfection.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "max-photo",
+    category: "Photography",
+    title: "Max Photo",
+    subtitle: "Cinematic Wedding Photography & Films",
+    description: "A premium digital studio for Max Photo, specializing in cinematic wedding photography and soulful storytelling. Featuring AI-integrated guest galleries, high-end visual aesthetics, and a seamless journey from consultation to final album.",
+    highlights: [
+      { title: "Cinematic Storytelling", text: "Expertly crafted wedding films and photography that capture emotion, elegance, and intricate details in every frame." },
+      { title: "AI-Powered Experience", text: "Modern workflow featuring AI-integrated guest gallery options for instant photo sharing and enhanced engagement." },
+      { title: "15+ Years of Legacy", text: "A trusted brand in Mumbai with over 15 years of experience in high-end photography and cinematography." },
+      { title: "Digital Excellence", text: "Premium digital presence showcasing diverse services from candid photography to advanced photo restoration and professional studio portraits." },
+    ],
+    src: "/assets/max.webp",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://max-studio-eta.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Capturing emotions, not just moments. A cinematic storytelling platform for modern couples, preserving memories with artificial intelligence and human soul.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
     id: "aerospace",
     category: "Industrial",
     title: "Aerospace Aluminium Alloys",

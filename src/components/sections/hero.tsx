@@ -14,8 +14,56 @@ const HeroSection = () => {
   const { isLoading } = usePreloader();
 
   return (
-    <SectionWrapper id="hero" className="relative w-full min-h-[90vh] flex flex-col justify-center pt-24 pb-20 overflow-hidden">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto px-6 w-full">
+    <SectionWrapper id="hero" className="relative w-full min-h-[90vh] flex flex-col justify-center pt-24 pb-20 overflow-hidden bg-[#F8FAFC]">
+      {/* Premium Background Pattern & Animations */}
+      <div className="absolute inset-0 z-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#2563eb 0.5px, transparent 0.5px)', backgroundSize: '24px 24px' }} />
+      
+      {/* Scanning Light Beams */}
+      <motion.div 
+        animate={{ 
+          x: ['-100%', '100%'],
+          opacity: [0, 0.1, 0]
+        }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity, 
+          ease: "linear" 
+        }}
+        className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-blue-500 to-transparent skew-x-12 z-0 pointer-events-none"
+      />
+
+      {/* Floating Industrial Symbols */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        {[
+          { icon: "{ }", delay: 0, x: "10%", y: "20%" },
+          { icon: "</>", delay: 2, x: "85%", y: "15%" },
+          { icon: "[ ]", delay: 4, x: "70%", y: "70%" },
+          { icon: "const", delay: 1, x: "15%", y: "75%" },
+          { icon: "props", delay: 3, x: "80%", y: "40%" },
+        ].map((item, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ 
+              opacity: [0.1, 0.3, 0.1],
+              y: [0, -40, 0],
+              rotate: [0, 10, -10, 0]
+            }}
+            transition={{ 
+              duration: 10 + i * 2, 
+              repeat: Infinity, 
+              delay: item.delay,
+              ease: "easeInOut" 
+            }}
+            style={{ left: item.x, top: item.y }}
+            className="absolute text-blue-900 font-mono text-4xl font-black select-none pointer-events-none"
+          >
+            {item.icon}
+          </motion.div>
+        ))}
+      </div>
+      
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto px-6 w-full relative z-10">
         {/* Left: Strategic Content */}
         <div className="flex flex-col items-start text-left space-y-10 z-10 w-full lg:pr-8">
           <div className="space-y-6">
@@ -29,7 +77,7 @@ const HeroSection = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2563eb]"></span>
                 </span>
-                Senior Tech Partner & Software Engineer
+                Industrial Software Engineer & Tech Partner
               </div>
             </motion.div>
 
@@ -41,7 +89,7 @@ const HeroSection = () => {
             >
               Crafting <br />
               <span className="text-[#2563eb]">World-Class</span> <br />
-              Digital Experiences.
+              Industrial Solutions.
             </motion.h1>
           </div>
 
@@ -52,7 +100,7 @@ const HeroSection = () => {
           >
             <div className="space-y-6 max-w-xl">
               <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
-                With <span className="text-[#2563eb] font-bold">2+ Years of Industrial Excellence</span> in Noida and abroad, I engineer high-performance, enterprise-grade architectures using <span className="text-[#2563eb] font-bold">MERN</span> and <span className="text-[#2563eb] font-bold">Next.js</span>, bringing precision to complex industrial web systems.
+                Specialized in <span className="text-[#2563eb] font-bold">Industrial Excellence</span> and Full-Stack Engineering, I architect high-performance, enterprise-grade systems using <span className="text-[#2563eb] font-bold">MERN</span> and <span className="text-[#2563eb] font-bold">Next.js</span>, bringing precision to complex industrial workflows.
               </p>
               
               <div className="flex flex-wrap gap-3 pt-2">
@@ -112,7 +160,7 @@ const HeroSection = () => {
            <div className="absolute inset-0 bg-[#2563eb]/20 blur-[120px] rounded-full animate-pulse" />
            <div className="relative z-10 w-full h-full flex items-center justify-center animate-float">
               
-              <div className="w-full max-w-lg aspect-[4/3] rounded-2xl bg-[#0d1117] border border-gray-800 shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col relative group">
+              <div className="w-full max-w-lg aspect-[4/3] rounded-3xl bg-[#0d1117] border border-gray-800 shadow-[0_0_80px_-20px_rgba(37,99,235,0.4)] overflow-hidden flex flex-col relative group">
                  {/* Mac Header */}
                  <div className="h-10 bg-[#161b22] border-b border-gray-800 flex items-center px-4 gap-2">
                     <div className="flex gap-1.5">
@@ -121,7 +169,7 @@ const HeroSection = () => {
                        <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
                     </div>
                     <div className="mx-auto px-4 py-1 rounded bg-[#0d1117] text-gray-400 text-[10px] sm:text-xs font-mono border border-gray-800">
-                       components/Hero.tsx
+                       components/Industrial_Core.tsx
                     </div>
                  </div>
                  
@@ -132,20 +180,16 @@ const HeroSection = () => {
                           <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
                        </div>
                        <div>
-                          <span className="text-[#ff7b72]">import</span> React <span className="text-[#ff7b72]">from</span> <span className="text-[#a5d6ff]">'react'</span>;<br/>
-                          <span className="text-[#ff7b72]">import</span> {'{'} motion {'}'} <span className="text-[#ff7b72]">from</span> <span className="text-[#a5d6ff]">'framer-motion'</span>;<br/><br/>
-                          <span className="text-[#ff7b72]">export default function</span> <span className="text-[#d2a8ff]">HeroSection</span>() {'{'} <br/>
-                          &nbsp;&nbsp;<span className="text-[#ff7b72]">return</span> ( <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&lt;</span><span className="text-[#79c0ff]">main</span> <span className="text-[#a5d6ff]">className</span>=<span className="text-[#a5d6ff]">"flex min-h-screen"</span><span className="text-gray-500">&gt;</span> <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&lt;</span><span className="text-[#79c0ff]">motion.div</span> <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#a5d6ff]">initial</span>={'{'}<span className="text-[#79c0ff]">0</span>{'}'} <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#a5d6ff]">animate</span>={'{'}<span className="text-[#79c0ff]">1</span>{'}'} <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&gt;</span> <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&lt;</span><span className="text-[#79c0ff]">h1</span><span className="text-gray-500">&gt;</span><span className="text-white font-bold">Arun Verma</span><span className="text-gray-500">&lt;/</span><span className="text-[#79c0ff]">h1</span><span className="text-gray-500">&gt;</span> <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&lt;/</span><span className="text-[#79c0ff]">motion.div</span><span className="text-gray-500">&gt;</span> <br/>
-                          &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-gray-500">&lt;/</span><span className="text-[#79c0ff]">main</span><span className="text-gray-500">&gt;</span> <br/>
-                          &nbsp;&nbsp;); <br/>
-                          {'}'} <br/>
+                          <span className="text-[#ff7b72]">import</span> {'{'} Industrial_Engine {'}'} <span className="text-[#ff7b72]">from</span> <span className="text-[#a5d6ff]">'@core'</span>;<br/>
+                          <span className="text-[#ff7b72]">const</span> project = <span className="text-[#d2a8ff]">new</span> <span className="text-[#79c0ff]">Industrial_Engine</span>();<br/><br/>
+                          <span className="text-[#ff7b72]">project</span>.<span className="text-[#d2a8ff]">initialize</span>({'{'} <br/>
+                          &nbsp;&nbsp;precision: <span className="text-[#a5d6ff]">"99.9%"</span>, <br/>
+                          &nbsp;&nbsp;performance: <span className="text-[#a5d6ff]">"High-Speed"</span>, <br/>
+                          &nbsp;&nbsp;scalability: <span className="text-[#79c0ff]">true</span> <br/>
+                          {'}'}); <br/><br/>
+                          <span className="text-gray-500">// Deploying to production...</span><br/>
+                          <span className="text-[#ff7b72]">await</span> project.<span className="text-[#d2a8ff]">deploy</span>();
+                          
                           <motion.div 
                             animate={{ opacity: [1, 0, 1] }} 
                             transition={{ repeat: Infinity, duration: 1 }}
@@ -155,48 +199,64 @@ const HeroSection = () => {
                     </div>
                  </div>
                  
+                 {/* Animated Progress Overlay */}
+                 <motion.div 
+                    initial={{ width: "0%" }}
+                    animate={{ width: ["0%", "100%", "0%"] }}
+                    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-0 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 opacity-50 shadow-[0_0_15px_rgba(37,99,235,0.8)]"
+                 />
+
                  {/* Floating Badges */}
                  <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -right-6 top-1/4 bg-white/10 backdrop-blur-md p-3 rounded-2xl border border-white/20 shadow-xl"
+                    animate={{ y: [0, -15, 0], x: [0, 5, 0] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -right-6 top-1/4 bg-white/10 backdrop-blur-xl p-3 rounded-2xl border border-white/20 shadow-2xl"
                   >
                     <div className="flex items-center gap-3">
-                       <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                       <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-inner">
                           <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" className="w-6 h-6 object-contain" alt="Next.js" />
                        </div>
                        <div>
-                          <p className="text-[10px] text-gray-400 font-bold uppercase">Framework</p>
-                          <p className="text-sm text-white font-bold">Next.js</p>
+                          <p className="text-[10px] text-blue-300 font-black uppercase tracking-tighter">Framework</p>
+                          <p className="text-sm text-white font-bold">Next.js 14</p>
                        </div>
                     </div>
                  </motion.div>
 
                  <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute -left-6 bottom-1/4 bg-blue-600/90 backdrop-blur-md p-3 rounded-2xl border border-blue-500 shadow-xl shadow-blue-500/30"
+                    animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    className="absolute -left-6 bottom-1/4 bg-blue-600/80 backdrop-blur-xl p-3 rounded-2xl border border-blue-400 shadow-2xl shadow-blue-500/20"
                   >
                     <div className="flex items-center gap-3">
                        <div className="w-10 h-10 rounded-full bg-[#282c34] flex items-center justify-center overflow-hidden">
-                          <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" className="w-7 h-7 object-contain" alt="React" />
+                          <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" className="w-7 h-7 object-contain animate-spin-slow" alt="React" />
                        </div>
                        <div className="leading-tight">
-                          <p className="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Library</p>
-                          <p className="text-white text-sm font-bold">React JS</p>
+                          <p className="text-blue-100 text-[10px] font-black uppercase tracking-wider">Library</p>
+                          <p className="text-white text-sm font-bold">React.js</p>
                        </div>
                     </div>
                  </motion.div>
                  
                  <motion.div 
-                   animate={{ y: [0, -5, 0] }}
-                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                   className="absolute -bottom-8 -right-2 w-36 h-36 bg-white border border-blue-100 shadow-2xl p-5 flex flex-col justify-center transform rotate-3 rounded-[2rem] border-b-8 border-b-blue-600"
+                    animate={{ y: [0, -10, 0], rotate: [3, -3, 3] }}
+                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                    className="absolute -bottom-8 -right-2 w-40 h-40 bg-white/95 backdrop-blur-md border border-blue-100 shadow-2xl p-6 flex flex-col justify-center rounded-[2.5rem] border-b-8 border-b-blue-600 group-hover:scale-105 transition-transform"
                  >
-                    <p className="text-[10px] uppercase font-black text-gray-400 tracking-tighter">Performance</p>
-                    <p className="text-4xl font-black text-[#111827]">99<span className="text-blue-600 text-xl">%</span></p>
-                    <div className="h-2 w-full bg-gray-100 rounded-full mt-3 overflow-hidden">
-                       <div className="h-full w-[99%] bg-blue-600 rounded-full" />
+                    <p className="text-[10px] uppercase font-black text-gray-400 tracking-tighter">System Status</p>
+                    <p className="text-4xl font-black text-gray-900 leading-none">Optimal</p>
+                    <div className="flex items-center gap-2 mt-3">
+                       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                       <span className="text-[10px] font-bold text-green-600 uppercase">Live Systems</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-gray-100 rounded-full mt-4 overflow-hidden">
+                       <motion.div 
+                         animate={{ x: ["-100%", "100%"] }}
+                         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                         className="h-full w-1/2 bg-blue-600 rounded-full opacity-50" 
+                       />
                     </div>
                  </motion.div>
               </div>

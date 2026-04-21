@@ -184,7 +184,7 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "Dec 2024",
+    startDate: "Jan 2026",
     endDate: "Present",
     title: "Project Lead & Full Stack Engineer",
     company: "Industrial Global Solutions",
@@ -205,15 +205,15 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     id: 2,
-    startDate: "Apr 2022",
-    endDate: "Dec 2024",
-    title: "Senior Industrial Software Engineer (Noida-HQ)",
+    startDate: "Jan 2025",
+    endDate: "Dec 2025",
+    title: "Software Engineer Trainee (Noida-HQ)",
     company: "Manufacturing Excellence Systems",
     description: [
-      "Engineered high-precision industrial software solutions during a 2-year tenure in Noida.",
+      "Engineered high-precision industrial software solutions during an intensive 1-year tenure in Noida.",
       "Delivered real-world industry projects focusing on data accuracy and equipment monitoring.",
-      "Developed custom internal dashboards that automated 100% of the equipment inventory pipeline.",
-      "Mentored junior developers and enforced professional code quality standards across the organization.",
+      "Developed custom internal dashboards that automated equipment inventory pipelines.",
+      "Maintained professional code quality standards across the organization's industrial products.",
     ],
     skills: [
       SkillNames.REACT,
