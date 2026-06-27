@@ -177,6 +177,8 @@ export type Experience = {
   endDate: string;
   title: string;
   company: string;
+  location: string;
+  jobType: "Remote" | "Full Time" | "Internship" | "Contract";
   description: string[];
   skills: SkillNames[];
 };
@@ -184,10 +186,58 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
+    startDate: "Feb 2026",
+    endDate: "Present",
+    title: "Full Stack Web Developer",
+    company: "Digital Solution 360",
+    location: "Noida, UP (Remote)",
+    jobType: "Remote",
+    description: [
+      "Leading remote full-cycle development for high-impact digital solutions and enterprise web architectures.",
+      "Implementing 360° digital transformation strategies for diverse client portfolios, focusing on scalability.",
+      "Optimizing frontend performance and modular UI components using the latest industry standards.",
+      "Managing complex project deliverables and collaborating via remote workflows to ensure 100% client satisfaction.",
+    ],
+    skills: [
+      SkillNames.REACT,
+      SkillNames.NEXTJS,
+      SkillNames.TS,
+      SkillNames.NODEJS,
+      SkillNames.TAILWIND,
+      SkillNames.GIT,
+    ],
+  },
+  {
+    id: 2,
+    startDate: "Feb 2026",
+    endDate: "Apr 2026",
+    title: "Web Developer",
+    company: "SABsoftzone!",
+    location: "Ghaziabad / Noida",
+    jobType: "Full Time",
+    description: [
+      "Engineered responsive web applications and complex user interfaces in a high-velocity development environment.",
+      "Translated intricate business requirements into functional, high-performance web components.",
+      "Optimized codebase for speed and accessibility, ensuring seamless cross-browser compatibility.",
+      "Worked closely with creative and backend teams to deliver production-ready software solutions.",
+    ],
+    skills: [
+      SkillNames.JS,
+      SkillNames.HTML,
+      SkillNames.CSS,
+      SkillNames.REACT,
+      SkillNames.GIT,
+      SkillNames.NPM,
+    ],
+  },
+  {
+    id: 3,
     startDate: "Jan 2026",
     endDate: "Present",
     title: "Project Lead & Full Stack Engineer",
     company: "Industrial Global Solutions",
+    location: "Gurugram, India",
+    jobType: "Full Time",
     description: [
       "Optimized enterprise-level server-side rendering for massive industrial product catalogs.",
       "Architected complex dynamic routing systems, increasing SEO visibility by 65%.",
@@ -204,11 +254,13 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     startDate: "Jan 2025",
     endDate: "Dec 2025",
-    title: "Software Engineer Trainee (Noida-HQ)",
+    title: "Software Engineer Trainee",
     company: "Manufacturing Excellence Systems",
+    location: "Noida-HQ, India",
+    jobType: "Internship",
     description: [
       "Engineered high-precision industrial software solutions during an intensive 1-year tenure in Noida.",
       "Delivered real-world industry projects focusing on data accuracy and equipment monitoring.",

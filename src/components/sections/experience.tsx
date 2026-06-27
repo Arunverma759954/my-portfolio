@@ -6,6 +6,8 @@ import SectionWrapper from "../ui/section-wrapper";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+import { MapPin, Building2, Briefcase } from "lucide-react";
+
 const ExperienceSection = () => {
   return (
     <SectionWrapper id="experience" className="bg-white py-20 relative z-10">
@@ -78,34 +80,44 @@ const ExperienceCard = ({
       >
         <CardHeader className="pb-4 pt-8 px-8">
           <div className="flex flex-col space-y-4">
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-center">
               <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
                 {experience.startDate} — {experience.endDate}
               </Badge>
+              <Badge className="bg-emerald-500/10 text-emerald-700 border-none px-3 py-1 rounded-full text-[10px] font-bold uppercase">
+                {experience.jobType}
+              </Badge>
             </div>
             
-            <div className="space-y-1">
+            <div className="space-y-2">
               <CardTitle className="text-xl font-bold text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">
                 {experience.title}
               </CardTitle>
-              <div className="text-sm font-bold text-gray-500 uppercase tracking-[0.15em]">
-                {experience.company}
+              <div className="flex flex-col gap-1.5">
+                <div className="flex items-center gap-2 text-sm font-bold text-gray-500 uppercase tracking-[0.1em]">
+                  <Building2 className="w-4 h-4 text-blue-500" />
+                  {experience.company}
+                </div>
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-400">
+                  <MapPin className="w-4 h-4 text-gray-400" />
+                  {experience.location}
+                </div>
               </div>
             </div>
           </div>
         </CardHeader>
         
         <CardContent className="space-y-8 px-8 pb-10">
-          <ul className="space-y-4">
+          <ul className="space-y-3 pt-2">
             {experience.description.map((point, i) => (
               <li key={i} className="flex gap-4 group/item">
                 <div className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-600/30 group-hover/item:bg-blue-600 group-hover/item:scale-125 transition-all shrink-0" />
-                <p className="text-gray-600 text-[15px] leading-relaxed font-medium">{point}</p>
+                <p className="text-gray-600 text-[14px] leading-relaxed font-medium">{point}</p>
               </li>
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-2.5 pt-4 border-t border-gray-100">
+          <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
             {experience.skills.map((skillName) => {
               const skill = SKILLS[skillName as SkillNames];
               return (
