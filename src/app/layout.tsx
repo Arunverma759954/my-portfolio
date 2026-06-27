@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     url: config.site,
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/assets/icons8-portfolio-48.png",
+  },
 };
 
 export default function RootLayout({

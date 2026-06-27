@@ -181,6 +181,7 @@ export type Experience = {
   jobType: "Remote" | "Full Time" | "Internship" | "Contract";
   description: string[];
   skills: SkillNames[];
+  certificate?: string;
 };
 
 export const EXPERIENCE: Experience[] = [
@@ -254,28 +255,28 @@ export const EXPERIENCE: Experience[] = [
     ],
   },
   {
-    id: 4,
-    startDate: "Jan 2025",
-    endDate: "Dec 2025",
-    title: "Software Engineer Trainee",
-    company: "Manufacturing Excellence Systems",
-    location: "Noida-HQ, India",
-    jobType: "Internship",
+    id: 5,
+    startDate: "Jul 2024",
+    endDate: "Dec 2024",
+    title: "Full Stack Developer",
+    company: "Client Infotech Works Pvt Ltd",
+    location: "Wave City, Ghaziabad",
+    jobType: "Full Time",
     description: [
-      "Engineered high-precision industrial software solutions during an intensive 1-year tenure in Noida.",
-      "Delivered real-world industry projects focusing on data accuracy and equipment monitoring.",
-      "Developed custom internal dashboards that automated equipment inventory pipelines.",
-      "Maintained professional code quality standards across the organization's industrial products.",
+      "Developed and maintained high-performance web applications using modern JavaScript frameworks.",
+      "Collaborated with cross-functional teams to design and implement scalable frontend and backend solutions.",
+      "Optimized application performance and ensured seamless user experiences across various devices.",
+      "Participated in code reviews and architectural discussions to maintain high standards of code quality.",
     ],
     skills: [
+      SkillNames.JS,
       SkillNames.REACT,
-      SkillNames.REACT_NATIVE,
       SkillNames.NODEJS,
-      SkillNames.EXPRESS,
       SkillNames.MONGODB,
-      SkillNames.TAILWIND,
-      SkillNames.GIT,
+      SkillNames.HTML,
+      SkillNames.CSS,
     ],
+    certificate: "/assets/WhatsApp Image 2026-06-27 at 11.17.49 PM.jpeg",
   },
 ];
 

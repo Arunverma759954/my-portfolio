@@ -6,7 +6,7 @@ import SectionWrapper from "../ui/section-wrapper";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { MapPin, Building2, Briefcase } from "lucide-react";
+import { MapPin, Building2, Briefcase, FileCheck } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
@@ -117,23 +117,37 @@ const ExperienceCard = ({
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
-            {experience.skills.map((skillName) => {
-              const skill = SKILLS[skillName as SkillNames];
-              return (
-                <div
-                  key={skillName}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-100 text-[10px] font-bold text-gray-700 uppercase tracking-wider group/skill hover:bg-white hover:border-blue-200 transition-all cursor-default"
-                >
-                  <img
-                    src={skill.icon}
-                    alt={skill.label}
-                    className="w-3.5 h-3.5 object-contain"
-                  />
-                  {skill.label}
-                </div>
-              );
-            })}
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100">
+            <div className="flex flex-wrap gap-2">
+              {experience.skills.map((skillName) => {
+                const skill = SKILLS[skillName as SkillNames];
+                return (
+                  <div
+                    key={skillName}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-100 text-[10px] font-bold text-gray-700 uppercase tracking-wider group/skill hover:bg-white hover:border-blue-200 transition-all cursor-default"
+                  >
+                    <img
+                      src={skill.icon}
+                      alt={skill.label}
+                      className="w-3.5 h-3.5 object-contain"
+                    />
+                    {skill.label}
+                  </div>
+                );
+              })}
+            </div>
+
+            {experience.certificate && (
+              <a 
+                href={experience.certificate} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider hover:bg-blue-700 transition-all shadow-sm shadow-blue-200"
+              >
+                <FileCheck className="w-3.5 h-3.5" />
+                Experience Letter
+              </a>
+            )}
           </div>
         </CardContent>
       </Card>
