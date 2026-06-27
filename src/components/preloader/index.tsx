@@ -31,10 +31,7 @@ type PreloaderProps = {
 
 export const usePreloader = () => {
   const context = useContext(preloaderContext);
-  if (!context) {
-    throw new Error("usePreloader must be used within a PreloaderProvider");
-  }
-  return context;
+  return context || INITIAL;
 };
 const LOADING_TIME = 4.0;
 function Preloader({ children, disabled = false }: PreloaderProps) {

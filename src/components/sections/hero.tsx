@@ -56,7 +56,7 @@ const HeroSection = () => {
               ease: "easeInOut" 
             }}
             style={{ left: item.x, top: item.y }}
-            className="absolute text-blue-900 font-mono text-4xl font-black select-none pointer-events-none"
+            className="absolute text-blue-900 font-mono text-2xl font-bold select-none pointer-events-none"
           >
             {item.icon}
           </motion.div>
@@ -72,7 +72,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
             >
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200 text-[#111827] text-xs font-black uppercase tracking-widest shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200 text-[#111827] text-xs font-extrabold uppercase tracking-widest shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2563eb]"></span>
@@ -85,7 +85,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.4, type: "spring", stiffness: 90 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-black text-[#111827] leading-[1.2] tracking-tight"
+              className="text-xl md:text-2xl lg:text-3xl font-bold text-[#111827] leading-[1.2] tracking-tight"
             >
               Crafting <br />
               <span className="text-[#2563eb]">World-Class</span> <br />
@@ -116,7 +116,7 @@ const HeroSection = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-sm font-black text-gray-700 tracking-tight">{item}</span>
+                    <span className="text-sm font-bold text-gray-700 tracking-tight">{item}</span>
                   </div>
                 ))}
               </div>
@@ -130,7 +130,7 @@ const HeroSection = () => {
             className="flex flex-wrap gap-5 pt-4"
           >
             <Link href="#contact">
-              <Button size="lg" className="h-14 px-8 text-md text-white font-black rounded-2xl bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] hover:-translate-y-1 transition-all group">
+              <Button size="lg" className="h-14 px-8 text-md text-white font-extrabold rounded-2xl bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] shadow-[0_8px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] hover:-translate-y-1 transition-all group">
                 Start a Conversation
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </Button>
@@ -218,7 +218,7 @@ const HeroSection = () => {
                           <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" className="w-6 h-6 object-contain" alt="Next.js" />
                        </div>
                        <div>
-                          <p className="text-[10px] text-blue-300 font-black uppercase tracking-tighter">Framework</p>
+                          <p className="text-[10px] text-blue-300 font-extrabold uppercase tracking-tighter">Framework</p>
                           <p className="text-sm text-white font-bold">Next.js 14</p>
                        </div>
                     </div>
@@ -234,7 +234,7 @@ const HeroSection = () => {
                           <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" className="w-7 h-7 object-contain animate-spin-slow" alt="React" />
                        </div>
                        <div className="leading-tight">
-                          <p className="text-blue-100 text-[10px] font-black uppercase tracking-wider">Library</p>
+                          <p className="text-blue-100 text-[10px] font-extrabold uppercase tracking-wider">Library</p>
                           <p className="text-white text-sm font-bold">React.js</p>
                        </div>
                     </div>
@@ -245,8 +245,8 @@ const HeroSection = () => {
                     transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                     className="absolute -bottom-8 -right-2 w-40 h-40 bg-white/95 backdrop-blur-md border border-blue-100 shadow-2xl p-6 flex flex-col justify-center rounded-[2.5rem] border-b-8 border-b-blue-600 group-hover:scale-105 transition-transform"
                  >
-                    <p className="text-[10px] uppercase font-black text-gray-400 tracking-tighter">System Status</p>
-                    <p className="text-4xl font-black text-gray-900 leading-none">Optimal</p>
+                    <p className="text-[10px] uppercase font-extrabold text-gray-400 tracking-tighter">System Status</p>
+                    <p className="text-3xl font-bold text-gray-900 leading-none">Optimal</p>
                     <div className="flex items-center gap-2 mt-3">
                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                        <span className="text-[10px] font-bold text-green-600 uppercase">Live Systems</span>

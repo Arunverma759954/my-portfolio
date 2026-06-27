@@ -11,7 +11,7 @@ export const SectionHeader = ({ id, title, desc, className }: { id: string, titl
         <BoxReveal width="100%">
           <h2
             className={cn(
-              "text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center",
+               "text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-center",
               "text-white/90"
             )}
           >

@@ -22,16 +22,16 @@ import SectionWrapper from "../ui/section-wrapper";
 
 const ProjectsSection = () => {
   return (
-    <SectionWrapper id="projects" className="bg-[#F1F5F9] py-32">
+    <SectionWrapper id="projects" className="bg-[#F1F5F9] py-20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-24 space-y-4"
+          className="flex flex-col items-center text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#111827] tracking-tight">
             Case <span className="text-[#2563eb]">Studies</span>
           </h2>
           <p className="text-base md:text-lg text-gray-500 max-w-2xl font-medium">
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
         
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-20">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
@@ -69,14 +69,14 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="w-full h-full object-cover rounded-2xl border border-gray-50 transition-transform duration-700 group-hover/card:scale-[1.03]"
             />
           </div>
-          <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center gap-6">
+          <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center gap-5">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-black uppercase tracking-widest text-[#2563eb] bg-blue-50 px-4 py-1.5 rounded-full">
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#2563eb] bg-blue-50 px-4 py-1.5 rounded-full">
                   {project.category}
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#111827] leading-tight group-hover/card:text-[#2563eb] transition-colors tracking-tight">
+              <h3 className="text-xl md:text-2xl font-bold text-[#111827] leading-tight group-hover/card:text-[#2563eb] transition-colors tracking-tight">
                 {project.title}
               </h3>
               <p className="text-sm md:text-base text-gray-600 font-medium leading-relaxed line-clamp-2 mt-2">
@@ -84,15 +84,15 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               </p>
               <div className="flex flex-wrap gap-2 pt-3">
                  {project.skills?.frontend?.slice(0, 4).map((s, i) => (
-                   <span key={`card-f-${i}`} className="px-2.5 py-1 bg-blue-50/80 text-[#2563eb] text-[10px] md:text-xs font-black rounded-md border border-blue-100 uppercase tracking-wider">{s.title}</span>
+                   <span key={`card-f-${i}`} className="px-2.5 py-1 bg-blue-50/80 text-[#2563eb] text-[10px] md:text-xs font-extrabold rounded-md border border-blue-100 uppercase tracking-wider">{s.title}</span>
                  ))}
                  {project.skills?.backend?.slice(0, 3).map((s, i) => (
-                   <span key={`card-b-${i}`} className="px-2.5 py-1 bg-gray-50 text-gray-600 text-[10px] md:text-xs font-black rounded-md border border-gray-200 uppercase tracking-wider">{s.title}</span>
+                   <span key={`card-b-${i}`} className="px-2.5 py-1 bg-gray-50 text-gray-600 text-[10px] md:text-xs font-extrabold rounded-md border border-gray-200 uppercase tracking-wider">{s.title}</span>
                  ))}
               </div>
             </div>
             
-            <div className="flex items-center text-sm font-black text-[#2563eb] uppercase tracking-tighter transition-all">
+            <div className="flex items-center text-sm font-extrabold text-[#2563eb] uppercase tracking-tighter transition-all">
                Analyze Project
               <span className="ml-2 group-hover/card:translate-x-2 transition-transform">→</span>
             </div>
@@ -123,7 +123,7 @@ const ProjectContents = ({ project }: { project: Project }) => {
       {/* Left Column: Content */}
       <div className="flex-1 flex flex-col space-y-6 lg:max-w-md">
         <div>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight">{project.title}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">{project.title}</h2>
           <p className="text-[#2563eb] text-lg font-bold mt-2">{project.subtitle || project.category}</p>
         </div>
 
@@ -145,7 +145,7 @@ const ProjectContents = ({ project }: { project: Project }) => {
 
         {/* Key Highlights */}
         <div className="space-y-4">
-          <h3 className="text-lg font-black tracking-tight text-gray-900">Key Highlights:</h3>
+          <h3 className="text-lg font-bold tracking-tight text-gray-900">Key Highlights:</h3>
           <ul className="space-y-3">
              {(project.highlights || [
                { title: "Modern & Responsive Design", text: "Clean, professional interface that looks beautiful on all devices." },

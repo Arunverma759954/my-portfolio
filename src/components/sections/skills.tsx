@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 
 const SkillsSection = () => {
   return (
-    <SectionWrapper id="skills" className="bg-[#F8FAFC] py-32">
+    <SectionWrapper id="skills" className="bg-[#F8FAFC] py-20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-24 space-y-4"
+          className="flex flex-col items-center text-center mb-12 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#111827] tracking-tight">
             Industrial <span className="text-[#2563eb]">Expertise</span>
           </h2>
           <p className="text-base md:text-lg text-gray-500 max-w-2xl font-medium">
@@ -59,7 +59,7 @@ const SkillsSection = () => {
                 />
               </div>
               <div className="text-center space-y-1">
-                <p className="text-[10px] font-black text-gray-400 group-hover:text-blue-600 uppercase tracking-[0.2em] transition-colors">
+                <p className="text-[10px] font-bold text-gray-400 group-hover:text-blue-600 uppercase tracking-[0.2em] transition-colors">
                   {skill.label}
                 </p>
                 <div 

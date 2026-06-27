@@ -250,6 +250,127 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "transport-packers",
+    category: "Logistics",
+    title: "Bharat Packers & Movers",
+    subtitle: "Premium Relocation & Transport Services",
+    description: "A high-performance logistics portal for Bharat Packers & Movers, specializing in seamless domestic and commercial relocations. Engineered with a focus on quick booking, transparent pricing, and nationwide service visibility.",
+    highlights: [
+      { title: "Smart Quotation System", text: "Integrated lead generation flow for rapid shifting estimates and service inquiries." },
+      { title: "Enterprise Logistics", text: "Showcasing specialized solutions for household, office, and vehicle transportation." },
+      { title: "Nationwide Network", text: "Highlighting a robust transport infrastructure ensuring safe delivery across all major Indian cities." },
+      { title: "Client Trust", text: "Built with a focus on reliability and security, featuring verified professional packing standards." },
+    ],
+    src: "/assets/Screenshot 2026-06-27 225656.png",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://transport-packer.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-center">Efficiency in Motion</TypographyP>
+          <TypographyP className="font-mono">
+            Relocation made simple. Bharat Packers & Movers provides a technology-driven approach to household and commercial logistics.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "kiran-italia",
+    category: "Industrial",
+    title: "Kiran Italia Chemicals",
+    subtitle: "Global Excellence in Silicates",
+    description: "A premium digital gateway for Kiran Italia Chemicals S.r.l., a global leader in silicate manufacturing. Designed with a focus on industrial precision, strategic market presence, and high-performance product showcases.",
+    highlights: [
+      { title: "Strategic Italian Presence", text: "Highlighting the brand's reach from global industry to local Italian markets with localized distribution." },
+      { title: "Silicate Excellence", text: "Specialized focus on high-quality silicate solutions for diverse industrial applications." },
+      { title: "Enterprise Branding", text: "Modern, professional UI that reflects the company's legacy and commitment to chemical innovation." },
+      { title: "Global Logistics", text: "Integrated supply chain highlights ensuring seamless delivery across international territories." },
+    ],
+    src: "/assets/Screenshot 2026-06-27 215428.png",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://kiran-globall.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Empowering global industries with silicate perfection. A high-end portal for Kiran Italia's mission-critical chemical solutions.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "midflora-herbal",
+    category: "Cosmetics",
+    title: "Midflora Herbal",
+    subtitle: "Trusted Third-Party Cosmetic Manufacturer",
+    description: "A comprehensive B2B manufacturing platform for Midflora Herbal, specializing in safe and market-ready cosmetic solutions. Featuring a highly professional interface for brand owners and industrial partners.",
+    highlights: [
+      { title: "Third-Party Expertise", text: "Dedicated platform for private label and contract manufacturing in the skincare and herbal segments." },
+      { title: "Safe & Market-Ready", text: "Focus on certified manufacturing processes that meet global safety and quality standards." },
+      { title: "Diverse Infrastructure", text: "Showcasing advanced manufacturing facilities capable of handling large-scale cosmetic production." },
+      { title: "Brand Empowerment", text: "Designed to help brand owners scale their cosmetic lines with reliable manufacturing support." },
+    ],
+    src: "/assets/Screenshot 2026-06-27 215621.png",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://doctor-theta-ten.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Your partner in cosmetic innovation. From formulation to final product, Midflora Herbal delivers excellence in herbal and skin care manufacturing.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "jeevan-parivartan",
+    category: "Healthcare",
+    title: "Jeevan Parivartan",
+    subtitle: "Supportive Sanctuary & Recovery Center",
+    description: "A compassionate digital presence for Jeevan Parivartan Nasha Mukti Kendra, providing a supportive sanctuary for recovery. Built with a focus on trust, accessibility, and professional guidance.",
+    highlights: [
+      { title: "Supportive Sanctuary", text: "A safe, structured environment designed for healing and personal transformation." },
+      { title: "24/7 Professional Guidance", text: "Continuous support from experienced medical professionals and counselors." },
+      { title: "Compassionate Care", text: "Focusing on empathetic treatment plans tailored to individual recovery journeys." },
+      { title: "Community Impact", text: "Providing high-impact recovery solutions with a 98% recovery rate achievement." },
+    ],
+    src: "/assets/Screenshot 2026-06-27 220755.png",
+    screenshots: [],
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.ts],
+    },
+    live: "https://parivartan-pied.vercel.app/",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            Healing through compassion. Jeevan Parivartan provides a structured path to recovery and a new lease on life.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+        </div>
+      );
+    },
+  },
+  {
     id: "air-fast",
     category: "Logistics",
     title: "Deb Air Express",

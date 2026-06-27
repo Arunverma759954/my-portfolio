@@ -8,16 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ExperienceSection = () => {
   return (
-    <SectionWrapper id="experience" className="bg-white py-32 relative z-10">
+    <SectionWrapper id="experience" className="bg-white py-20 relative z-10">
        <div className="max-w-7xl mx-auto px-6 md:px-8">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-16 space-y-4"
+          className="flex flex-col items-center text-center mb-12 space-y-4"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#111827] tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#111827] tracking-tight">
             Professional <span className="text-[#2563eb]">Journey</span>
           </h2>
           <p className="text-base md:text-lg text-gray-500 max-w-2xl font-medium">
@@ -79,13 +79,13 @@ const ExperienceCard = ({
         <CardHeader className="pb-4 pt-8 px-8">
           <div className="flex flex-col space-y-4">
             <div className="flex justify-between items-start">
-              <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">
+              <Badge className="bg-blue-600/10 text-blue-700 border-none px-4 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
                 {experience.startDate} — {experience.endDate}
               </Badge>
             </div>
             
             <div className="space-y-1">
-              <CardTitle className="text-2xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">
+              <CardTitle className="text-xl font-bold text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">
                 {experience.title}
               </CardTitle>
               <div className="text-sm font-bold text-gray-500 uppercase tracking-[0.15em]">
@@ -111,7 +111,7 @@ const ExperienceCard = ({
               return (
                 <div
                   key={skillName}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-100 text-[10px] font-black text-gray-700 uppercase tracking-wider group/skill hover:bg-white hover:border-blue-200 transition-all cursor-default"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-gray-50 border border-gray-100 text-[10px] font-bold text-gray-700 uppercase tracking-wider group/skill hover:bg-white hover:border-blue-200 transition-all cursor-default"
                 >
                   <img
                     src={skill.icon}
