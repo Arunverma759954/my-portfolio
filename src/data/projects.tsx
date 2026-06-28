@@ -569,7 +569,7 @@ const projects: Project[] = [
     id: "nursing-home",
     category: "Healthcare",
     title: "Raj Nursing Home",
-    src: "/assets/Screenshot 2026-04-04 105740.png",
+    src: "/assets/raj-nursing-home.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn],
