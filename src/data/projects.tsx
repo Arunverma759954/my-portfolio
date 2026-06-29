@@ -591,7 +591,7 @@ const projects: Project[] = [
     id: "atithi",
     category: "Hospitality",
     title: "Atithi Homestay",
-    src: "/assets/Screenshot 2026-04-04 105805.png",
+    src: "/assets/Screenshot 2026-06-29 094055.png",
     screenshots: [],
     skills: {
       frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
